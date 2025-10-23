@@ -1,3 +1,5 @@
+// import "./components";
+
 /**
  * Automatically set mode on preferred color change
  */
