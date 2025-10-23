@@ -1,0 +1,22 @@
+{
+  "name": "setsetset",
+  "version": "1.0.0",
+  "description": "Website for the setsetset studio.",
+  "main": "dist/js/index.js",
+  "scripts": {
+    "dev": "http-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loic-h/setsetset.git"
+  },
+  "author": "Loïc Hamet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loic-h/setsetset/issues"
+  },
+  "homepage": "https://github.com/loic-h/setsetset#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

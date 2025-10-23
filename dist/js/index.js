@@ -1,4 +1,4 @@
-// import "./components";
+import "./components/index.js";
 
 /**
  * Automatically set mode on preferred color change
