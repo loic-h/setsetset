@@ -1,6 +1,33 @@
+@font-face {
+    font-family: "GM Mono";
+    src: url("./fonts/dm-mono-regular.woff2") format("woff2"),
+         url("./fonts/dm-mono-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Serif";
+    src: url("./fonts/dm=serif-regular.woff2") format("woff2"),
+         url("./fonts/dm=serif-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("./fonts/dm-sans.woff2") format("woff2"),
+         url("./fonts/dm-sans.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --color-black: #1B1B1B;
     --color-white: #FFFEF5;
+    --font-family-sans: "DM Sans", Arial, sans-serif;
+    --font-family-serif: "DM Serif", serif;
+    --font-family-mono: "DM Mono", monospace;
 }
 
 [data-mode="light"] {
@@ -15,5 +42,7 @@
 
 html,
 body {
+    font-family: var(--font-family-sans);
     background-color: var(--color-background);
+    color: var(--color-main);
 }

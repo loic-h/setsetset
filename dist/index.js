@@ -17,7 +17,6 @@ const detectMode = () => {
  */
 const setMode = (mode) => {
     const dataset = document.querySelector("body").dataset;
-    console.log(dataset)
     dataset.mode = mode;
 };
 
@@ -25,7 +24,6 @@ const setMode = (mode) => {
  * Run main code
  */
 const init = () => {
-    console.log(document.querySelector("body"))
     detectMode();
 };
 
