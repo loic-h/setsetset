@@ -1,0 +1,17 @@
+:root {
+    --color-black: #1B1B1B;
+    --color-white: #FFFEF5;
+    --font-family-sans: "DM Sans";
+    --font-family-serif: "DM Serif", serif;
+    --font-family-mono: "DM Mono", monospace;
+}
+
+[data-mode="light"] {
+    --color-background: var(--color-white);
+    --color-main: var(--color-black);
+}
+
+[data-mode="dark"] {
+    --color-background: var(--color-black);
+    --color-main: var(--color-white);
+}

@@ -1,0 +1,9 @@
+@import "components/logo.css";
+@import "fonts.css";
+
+html,
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-background);
+    color: var(--color-main);
+}

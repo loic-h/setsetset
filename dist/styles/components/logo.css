@@ -1,0 +1,34 @@
+.logo {
+    --logo-color: var(--color-main);
+    --logo-mark-font-weight: bold;
+    --logo-mark-font-size: 1.25em;
+    --logo-letter-spacing: 0.05em;
+
+    font-size: var(--logo-mark-font-size);
+    letter-spacing: var(--logo-letter-spacing);
+}
+
+.logo-symbol {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.logo-symbol > div {
+    position: relative;
+    padding: 0 0.1em;
+}
+
+.logo-symbol:after {
+    content: "";
+    width: 100%;
+    height: 0.15em;
+    position: absolute;
+    top: 0.6em;
+    left: 0;
+    background: var(--logo-color);
+}
+
+.logo-mark {
+    font-weight: var(--logo-mark-font-weight);
+}
