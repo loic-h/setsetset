@@ -4,6 +4,13 @@
     --font-family-sans: "DM Sans";
     --font-family-serif: "DM Serif", serif;
     --font-family-mono: "DM Mono", monospace;
+    --logo-mark-font-weight: bold;
+    --logo-mark-font-size: 1.25em;
+    --logo-letter-spacing: 0.05em;
+    --catch-font-family: var(--font-family-serif);
+    --catch-font-size: 3em;
+
+    --n-anchors: 5;
 }
 
 [data-mode="light"] {
@@ -14,4 +21,8 @@
 [data-mode="dark"] {
     --color-background: var(--color-black);
     --color-main: var(--color-white);
+}
+
+body {
+    --logo-color: var(--color-main);
 }

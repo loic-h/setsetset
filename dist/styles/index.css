@@ -1,9 +1,63 @@
-@import "components/logo.css";
+@import "reset.css";
 @import "fonts.css";
+@import "pages/home.css";
 
 html,
 body {
     font-family: var(--font-family-sans);
     background-color: var(--color-background);
     color: var(--color-main);
+}
+
+body {
+    overflow: auto;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: calc(50vh - 5em);;
+}
+
+section > h2 {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+}
+
+.section-spacing-top {
+    height: calc(50vh - 5em);
+}
+
+.anchor {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.anchor:nth-of-type(1) {
+    top: 1em;
+    bottom: calc(1em * (var(--n-anchors) - 1));
+}
+
+.anchor:nth-of-type(2) {
+    top: 2em;
+    bottom: calc(1em * (var(--n-anchors) - 2));
+}
+
+.anchor:nth-of-type(3) {
+    top: 3em;
+    bottom: calc(1em * (var(--n-anchors) - 3));
+}
+
+.anchor:nth-of-type(4) {
+    top: 4em;
+    bottom: calc(1em * (var(--n-anchors) - 4));
+}
+
+.anchor:nth-of-type(5) {
+    top: 5em;
+    bottom: calc(1em * (var(--n-anchors) - 5));
 }
