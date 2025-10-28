@@ -9,6 +9,10 @@
     --logo-letter-spacing: 0.05em;
     --catch-font-family: var(--font-family-serif);
     --catch-font-size: 3em;
+    --grid-template-mobile: repeat(1, 1fr);
+    --grid-template-tablet: repeat(2, 1fr);
+    --grid-template-desktop: repeat(3, 1fr);
+    --grid-gap: 16px;
 
     --n-anchors: 5;
 }
