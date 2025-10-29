@@ -1,0 +1,45 @@
+/**
+ * Handle the enablement of active anchor on scroll
+ */
+export default function initActiveAnchor () {
+    const anchors = [...document.querySelectorAll("sss-anchor")];
+
+    const items = anchors.map((anchor) => ({
+        anchor,
+        section: getAnchorNextSection(anchor)
+    }));
+
+    const scrollHandler = debounce(() => handleScroll(items));
+
+    addEventListener("scroll", scrollHandler);
+};
+
+function handleScroll(items) {
+    items.forEach(({ anchor, section }) => {
+        const anchorRect = anchor.getBoundingClientRect();
+        const sectionRect = section.getBoundingClientRect();
+        if(anchorRect.bottom === sectionRect.top) {
+            anchor.setAttribute("active", "");
+        } else {
+            anchor.removeAttribute("active");
+        }
+    });
+}
+
+function getAnchorNextSection (anchor) {
+    let section = anchor;
+    while(section.tagName !== "SECTION") {
+        section = section.nextSibling;
+    }
+    return section;
+};
+
+function debounce(callback, delay = 0){
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { 
+            callback.apply(this, args); 
+        }, delay);
+    };
+}

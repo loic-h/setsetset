@@ -1,4 +1,5 @@
 import "./components/index.js";
+import initActiveAnchor from "./utils/initActiveAnchor.js";
 
 /**
  * Automatically set mode on preferred color change
@@ -27,6 +28,7 @@ const setMode = (mode) => {
  */
 const init = () => {
     detectMode();
+    initActiveAnchor();
 };
 
 /**

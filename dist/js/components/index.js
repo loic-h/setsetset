@@ -1,1 +1,1 @@
-import "./logo.js";
+import "./anchor.js";
