@@ -13,8 +13,9 @@
     --grid-template-tablet: repeat(2, 1fr);
     --grid-template-desktop: repeat(3, 1fr);
     --grid-gap: 16px;
-
-    --n-anchors: 5;
+    --anchor-font-size: 1.25em;
+    --anchor-line-height: 1.35;
+    --anchor-total: 5;
 }
 
 [data-mode="light"] {

@@ -47,27 +47,27 @@ sss-anchor[data-anchor] {
 
 [data-anchor="1"] {
     top: 1em;
-    bottom: calc(1em * (var(--n-anchors) - 1));
+    bottom: calc(0.5em + 1em * var(--anchor-line-height) * (var(--anchor-total) - 1));
 }
 
 [data-anchor="2"] {
     top: 2em;
-    bottom: calc(1em * (var(--n-anchors) - 2));
+    bottom: calc(0.5em + 1em * var(--anchor-line-height) * (var(--anchor-total) - 2));
 }
 
 [data-anchor="3"] {
-    top: 3em;
-    bottom: calc(1em * (var(--n-anchors) - 3));
+    top: calc(2em + var(--anchor-line-height) * 1em);
+    bottom: calc(0.5em + 1em * var(--anchor-line-height) * (var(--anchor-total) - 3));
 }
 
 [data-anchor="4"] {
-    top: 4em;
-    bottom: calc(1em * (var(--n-anchors) - 4));
+    top: calc(2em + var(--anchor-line-height) * 1em * 2);
+    bottom: calc(0.5em + 1em * var(--anchor-line-height) * (var(--anchor-total) - 4));
 }
 
 [data-anchor="5"] {
-    top: 5em;
-    bottom: calc(1em * (var(--n-anchors) - 5));
+    top: calc(2em + var(--anchor-line-height) * 1em * 3);
+    bottom: calc(0.5em + 1em * var(--anchor-line-height) * (var(--anchor-total) - 5));
 }
 
 .grid {

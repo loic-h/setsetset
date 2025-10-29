@@ -13,7 +13,8 @@ a {
 
 :host {
     font-family: var(--font-family-serif);
-    font-size: 1.2em;
+    font-size: var(--anchor-font-size);
+    line-height: var(--anchor-line-height);
     position: relative;
 }
 
