@@ -10,12 +10,13 @@ html {
 }
 
 body {
-    background-color: var(--color-background);
+    background-color: var(--body-color-background);
     color: var(--color-main);
     overflow: auto;
     padding: 0 24px;
     max-width: 1024px;;
     font-size: var(--font-size-base);
+    transition: background-color var(--transition-timing) var(--transition-function);
 }
 
 section {
@@ -23,7 +24,7 @@ section {
     display: flex;
     flex-direction: column;
     padding-top: var(--section-spacing-top);
-    padding-bottom: calc(50vh - 5em);
+    min-height: calc(50vh - 6em);
 }
 
 section > h2 {
@@ -127,7 +128,6 @@ sss-anchor[data-anchor] {
         grid-template-columns: var(--grid-template-tablet);
     }
 }
-
 
 /* DESKTOP */
 @media (min-width: 1024px) {
