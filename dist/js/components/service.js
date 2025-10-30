@@ -38,30 +38,37 @@ header button {
     height: 16px;
     position: relative;
     transition: transform var(--transition-timing) var(--transition-function);
+    cursor: inherit;
 }
 
 header button:before,
 header button:after {
-    content: "";
-    display: block;
-    width: 1em;
-    height: 1px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);;
+    transition: opacity var(--transition-timing) var(--transition-function),
+        transform var(--transition-timing) var(--transition-function);
     background: var(--color-main);
     position: absolute;
-    transform-origin: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    transform-origin: top;
+}
+
+header button:before {
+    width: 1em;
+    height: 1px;
 }
 
 header button:after {
-    transform: rotate(90deg) translate(-50%);;
+    height: 1em;
+    width: 1px;
+    transform: rotate(0deg) translate(-50%, -50%);
 }
 
-header:hover button:before,
-header:hover button:after {
-    height: 2px;
-    transition: height var(--transition-timing) var(--transition-function);
+
+header:hover button {
+    transform: rotate(180deg);
 }
 
 .body {
@@ -84,8 +91,9 @@ header:hover button:after {
     gap: 0.5em;
 }
 
-[data-active] header button {
-    transform: rotate(45deg);
+[data-active] header button:after {
+    transform: rotate(90deg) translate(-50%, -50%);
+    opacity: 0;
 }
 
 [data-active] .body {
