@@ -72,6 +72,9 @@ header:hover button:after {
 
 .body > div {
     overflow: hidden;
+}
+
+.body > div > div {
     padding-top: 0.75em;
 }
 
@@ -103,7 +106,9 @@ function getTemplate ({ label, title }) {
             </header>
             <div class="body">
                 <div>
-                    <slot name="body"></slot>
+                    <div>
+                        <slot name="body"></slot>
+                    </div>
                 </div>
             </div>
         </article>`;
