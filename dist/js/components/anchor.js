@@ -6,11 +6,6 @@
 const stylesheet = document.createElement('template');
 stylesheet.innerHTML = `
 <style>
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 :host {
     font-family: var(--font-family-serif);
     font-size: var(--anchor-font-size);
@@ -27,14 +22,14 @@ a {
 :host > div:after {
     content: "";
     display: block;
-    height: 0.16em;
+    height: var(--strike-width);
     position: absolute;
     top: 0.7em;
     left: 0;
     right: 0;
     background: var(--logo-color);
     animation: 3s linear slide-in;
-    transition: right 0.1s ease;
+    transition: right var(--transition-timing) var(--transition-function);
 }
 
 :host(:not([active]):hover) > div:after,
@@ -42,14 +37,30 @@ a {
     right: 100%;
 }
 
+:host a {
+    text-decoration: none;
+}
+
 </style>`;
+
+function getTemplate ({ label, href }) {
+    const template = document.createElement('template');
+    template.innerHTML = `
+        <div>
+            <div>
+                <a href="${href}">${label}</a>
+            </div>
+        </div>`;
+    return template.content.cloneNode(true);
+}
 
 class Anchor extends HTMLElement {
 
     connectedCallback() {
         this.attachShadow({mode: "open"});
+        this.shadowRoot.appendChild(document.getElementById("css-reset").content.cloneNode(true));
         this.shadowRoot.appendChild(stylesheet.content.cloneNode(true));
-        this.shadowRoot.appendChild(getTemplate({ 
+        this.shadowRoot.appendChild(getTemplate({
             href: this.href,
             label: this.label
         }));
@@ -74,21 +85,6 @@ class Anchor extends HTMLElement {
             this.removeAttribute("active");
         }
     }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        
-    }
-}
-
-function getTemplate ({ label, href }) {
-    const template = document.createElement('template');
-    template.innerHTML = `
-        <div>
-            <div>
-                <a href="${href}">${label}</a>
-            </div>
-        </div>`;
-    return template.content.cloneNode(true);
 }
 
 customElements.define('sss-anchor', Anchor);
