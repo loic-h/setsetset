@@ -13,10 +13,11 @@ body {
     background-color: var(--body-color-background);
     color: var(--color-main);
     overflow: auto;
-    padding: 0 24px;
+    margin: 0 24px;
     max-width: 1024px;;
     font-size: var(--font-size-base);
     transition: background-color var(--transition-timing) var(--transition-function);
+    position: relative;
 }
 
 section {
@@ -117,11 +118,29 @@ sss-anchor[data-anchor] {
     top: 0;
 }
 
+.settings {
+    position: absolute;
+    right: 0;
+    top: 1em;
+}
+
+.settings-theme {
+    cursor: pointer;
+}
+
+[data-theme="dark"] .settings-theme__light {
+    display: none;
+}
+
+[data-theme="light"] .settings-theme__dark {
+    display: none;
+}
+
 /* TABLET */
 @media (min-width: 800px) {
 
     body {
-        padding: 0 32px;
+        margin: 0 32px;
     }
 
     .grid {

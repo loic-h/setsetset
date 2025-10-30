@@ -2,32 +2,52 @@ import "./components/index.js";
 import initActiveAnchor from "./utils/initActiveAnchor.js";
 
 /**
- * Automatically set mode on preferred color change
+ * Automatically set theme on preferred color change
  */
-const detectMode = () => {
-    if (window.matchMedia('(prefers-color-scheme: dark)')) {
-        setMode("dark");
+const detectTheme = () => {
+    let storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+        setTheme(storedTheme);
+    }
+    else if (window.matchMedia('(prefers-color-scheme: dark)')) {
+        setTheme("dark");
     };
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        const mode = event.matches ? "dark" : "light";
-        setMode(mode);
+        const theme = event.matches ? "dark" : "light";
+        setTheme(theme);
+    });
+
+    document.querySelector(".settings-theme").addEventListener("click", () => {
+        toggleTheme();
     });
 }
 
 /**
- * Set color mode
+ * Set color theme
  */
-const setMode = (mode) => {
+const setTheme = (theme) => {
     const dataset = document.querySelector("body").dataset;
-    dataset.mode = mode;
+    dataset.theme = theme;
+    localStorage.setItem("theme", theme);
 };
+
+const toggleTheme = () => {
+    const dataset = document.querySelector("body").dataset;
+    let theme = dataset.theme;
+    if (theme === "dark") {
+        theme = "light";
+    } else {
+        theme = "dark";
+    }
+    setTheme(theme)
+}
 
 /**
  * Run main code
  */
 const init = () => {
-    detectMode();
+    detectTheme();
     initActiveAnchor();
 };
 
