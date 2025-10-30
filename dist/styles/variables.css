@@ -32,6 +32,7 @@
     --anchor-font-size: var(--font-size-big);
     --anchor-line-height: 1.35;
     --anchor-total: 5;
+    --anchor-padding: 0.2em;
     --section-spacing-top: 1.5em;
     --action-font-size: 0.8em;
     --action-border-radius: 2px;

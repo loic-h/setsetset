@@ -47,7 +47,6 @@ sss-anchor[data-anchor] {
     position: sticky;
     top: 0;
     bottom: 0;
-    margin: 0;
 }
 
 [data-anchor="1"] {

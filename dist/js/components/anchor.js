@@ -11,12 +11,13 @@ stylesheet.innerHTML = `
     font-size: var(--anchor-font-size);
     line-height: var(--anchor-line-height);
     position: relative;
-}
+    }
 
 :host > div {
     position: relative;
-    padding: 0 0.2em;
+    padding: 0 var(--anchor-padding);
     display: inline-block;
+    margin-left: calc(-1 * var(--anchor-padding));
 }
 
 :host > div:after {

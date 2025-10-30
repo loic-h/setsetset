@@ -2,6 +2,7 @@
 
 .logo-symbol {
     float: left;
+    margin-left: calc(-1 * var(--anchor-padding));
 }
 
 .logo-mark {
