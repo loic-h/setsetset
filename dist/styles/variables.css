@@ -17,7 +17,7 @@
     --font-size-big: 1.25em;
     --font-size-huge: 3em;
     --strike-width: 0.16em;
-    --transition-timing: 0.2s;
+    --transition-timing: 0.15s;
     --transition-function: ease-in-out;
     --body-color-background: var(--color-background);
     --logo-mark-font-weight: bold;
