@@ -22,12 +22,6 @@ header > div {
     gap: 0.5em;
 }
 
-.label {
-    font-family: var(--font-family-mono);
-    font-size: var(--font-size-small);
-    text-transform: uppercase;
-}
-
 header h3 {
     font-size: var(--font-size-big);
     font-weight: bold;
@@ -101,13 +95,13 @@ header:hover button {
 }
 </style>`;
 
-function getTemplate ({ label, title }) {
+function getTemplate ({ number, title }) {
     const template = document.createElement('template');
     template.innerHTML = `
         <article>
             <header>
                 <div>
-                    <span class="label">s${label} </span>
+                    <sss-serial initial="s" number="${number}"></sss-serial>
                     <h3>${title}</h3>
                 </div>
                 <button aria-label="Expand"></button>
@@ -124,14 +118,12 @@ function getTemplate ({ label, title }) {
 }
 
 class Service extends HTMLElement {
-    active;
-
     connectedCallback() {
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(document.getElementById("css-reset").content.cloneNode(true));
         this.shadowRoot.appendChild(stylesheet.content.cloneNode(true));
         this.shadowRoot.appendChild(getTemplate({
-            label: this.label.padStart(3, "0"),
+            number: this.serial.padStart(3, "0"),
             title: this.title
         }));
 
@@ -146,8 +138,8 @@ class Service extends HTMLElement {
         return this.getAttribute("title");
     }
 
-    get label() {
-        return this.getAttribute("label");
+    get serial() {
+        return this.getAttribute("serial");
     }
 }
 

@@ -12,6 +12,7 @@
     <script type="module" src="./js/index.js"></script>
 </head>
 <body data-theme="light">
+    <template>Yo</template>
     <div class="settings">
         <button class="settings-theme">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="settings-theme__dark">
@@ -64,11 +65,11 @@
 
     <!-- SERVICES -->
     <div class="section-spacing-top" id="services"></div>
-    <sss-anchor href="#services" label="Services" data-anchor="2"></sss-anchor>
+    <sss-anchor href="#services" label="Services" data-anchor="2" /></sss-anchor>
     <section class="services grid">
         <p class="services-intro">Whether you're launching a new project or refining an existing one, we help you bring your solutions online.</p>
         <div class="services-list">
-            <sss-service label="1" title="Web development">
+            <sss-service serial="1" title="Web development">
                 <ul slot="body">
                     <li>Accessibility</li>
                     <li>API and CMS solutions for easy content integration</li>
@@ -77,7 +78,7 @@
                     <li>E-commerce</li>
                 </ul>
             </sss-service>
-            <sss-service label="2" title="Product design">
+            <sss-service serial="2" title="Product design">
                 <ul slot="body">
                     <li>User Research</li>
                     <li>UX design</li>
@@ -96,22 +97,24 @@
 
     <!-- WORKS -->
     <div class="section-spacing-top" id="works"></div>
-    <sss-anchor href="#works" label="Works" data-anchor="3"></sss-anchor>
-    <section class="services">
-        <p>Lorem Ipsum</p>
+    <sss-anchor href="#works" label="Works" data-anchor="3" /></sss-anchor>
+    <section class="works">
+        <p class="intro">A selection of productions for out clients.</p>
+        <sss-work-list src="works" />
     </section>
 
     <!-- LABS -->
     <div class="section-spacing-top" id="labs"></div>
-    <sss-anchor href="#labs" label="Labs" data-anchor="4"></sss-anchor>
-    <section class="services">
-        <p>Lorem Ipsum</p>
+    <sss-anchor href="#labs" label="Labs" data-anchor="4" /></sss-anchor>
+    <section class="labs">
+        <p class="intro">Some side projects. Just for the fun of it.</p>
+        <sss-work-list src="labs" />
     </section>
 
     <!-- CONTACT -->
     <div class="section-spacing-top" id="contact"></div>
-    <sss-anchor href="#contact" label="Contact" data-anchor="5"></sss-anchor>
-    <section class="services">
+    <sss-anchor href="#contact" label="Contact" data-anchor="5" /></sss-anchor>
+    <section class="contact">
         <p>Lorem Ipsum</p>
     </section>
 </body>
