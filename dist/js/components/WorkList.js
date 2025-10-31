@@ -1,6 +1,5 @@
 import data from "../data/works.json" with {type: 'json'};
 
-
 const stylesheet = document.createElement('template');
 stylesheet.innerHTML = `
 <style>
@@ -47,10 +46,6 @@ stylesheet.innerHTML = `
 .tag-list li:not(:last-child) {
     padding-right: 0.5em;
     border-right: var(--color-main) solid 1px;
-}
-
-.code {
-
 }
 </style>`;
 

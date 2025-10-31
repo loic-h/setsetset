@@ -1,5 +1,4 @@
-.services-intro {
-    padding-bottom: 1.5em;
+.services .intro {
     grid-column: auto / span 1;
 }
 
@@ -17,7 +16,7 @@
 
 /* TABLET */
 @media (min-width: 800px) {
-    .services-intro,
+    .services .intro,
     .services-action {
         grid-column: 1 / span 1;
     }
