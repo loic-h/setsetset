@@ -10,8 +10,15 @@ export default function initActiveAnchor () {
     }));
 
     const scrollHandler = debounce(() => handleScroll(items));
+    let isBackgroundAnimate = false;
 
-    addEventListener("scroll", scrollHandler);
+    addEventListener("scroll", () => {
+        scrollHandler()
+    });
+
+    setTimeout(() => {
+        document.querySelector("body").classList.add("animate-background");
+    }, 200);
 };
 
 function handleScroll(items) {

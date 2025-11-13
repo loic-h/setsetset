@@ -13,4 +13,5 @@
 .catch-phrase {
     font-family: var(--catch-font-family);
     font-size: var(--catch-font-size);
+    line-height: 1.2;
 }

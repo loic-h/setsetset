@@ -8,6 +8,7 @@ html {
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
+    transition-duration: 500ms;
 }
 
 body {
@@ -17,8 +18,11 @@ body {
     margin: 0 24px;
     max-width: 1024px;;
     font-size: var(--font-size-base);
-    transition: background-color var(--transition-timing) var(--transition-function);
     position: relative;
+}
+
+body.animate-background {
+    transition: background-color 0.5s var(--transition-function);
 }
 
 section {
@@ -26,7 +30,7 @@ section {
     display: flex;
     flex-direction: column;
     padding-top: var(--section-spacing-top);
-    min-height: calc(50vh - 6em);
+    min-height: calc(55vh - 6em);
 }
 
 section > h2 {
@@ -36,7 +40,7 @@ section > h2 {
 }
 
 .section-spacing-top {
-    height: calc(50vh - 5em);
+    height: calc(45vh - 5em);
 }
 
 sss-anchor[data-anchor] {
